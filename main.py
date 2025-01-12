@@ -38,9 +38,9 @@ def complete_order(order_id):
     return order
 
 
-user1 = add_customer(name="Hitesh", email="h@d.com", phone="003", location="blore")
-user2 = add_customer(name="Anuradha", email="h@d.com", phone="003", location="blore")
-user3 = add_customer(name="Manvik", email="h@d.com", phone="003", location="delhi")
+user1 = add_customer(name="Hitesh", email="hd@gmail.com", phone="002", location="blore")
+user2 = add_customer(name="Brad", email="bp@gmail.com", phone="001", location="blore")
+user3 = add_customer(name="George", email="gc@gmail.com", phone="003", location="blore")
 
 
 menu1 = [MenuItem("Biriyani", 100), MenuItem("Pepper Chicken", 200), MenuItem("Mutton", 200)]
@@ -74,6 +74,13 @@ print(order1.__dict__)
 
 order2 = complete_order(order2.order_id)
 print(order2.__dict__)
+
+cart3 = [OrderItem(menu2[1].name, 2), OrderItem(menu2[0].name, 1)]
+order3 = place_order(user3, res2, cart3)
+print(order3.__dict__)
+
+order3 = out_for_delivery(order3.order_id)
+print(order3.__dict__)
 
 
 

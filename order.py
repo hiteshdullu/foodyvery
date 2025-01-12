@@ -25,4 +25,4 @@ class Order:
 
     def order_complete(self):
         self.status = "Order Complete"
-        Agent.agents[self.agent_id] = "Available"
+        Agent.agents[self.agent_id].status = "Available"
